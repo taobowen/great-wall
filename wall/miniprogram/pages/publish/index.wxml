@@ -1,0 +1,23 @@
+<!--pages/publish/index.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells title="发布" footer="底部说明文字底部说明文字">
+                <mp-cell prop="title" title="标题" ext-class="">
+                    <input bindinput="formInputChange" data-field="theme" class="weui-input" placeholder="请输入标题"/>
+                </mp-cell>
+                <mp-cell prop="type" title="类别" ext-class="">
+                    <picker data-field="categoryId" mode="selector" range="{{type}}" value="{{formData.categoryId}}" bindchange="formInputChange">
+                        <view class="weui-input">{{type[formData.categoryId]}}</view>
+                    </picker>
+                </mp-cell>
+                <mp-cell prop="text" title="描述">
+                  <textarea placeholder="请输入帖子描述" data-field="detailedIntroduction" bindinput="formInputChange" auto-focus />
+                </mp-cell>
+            </mp-cells>
+        </mp-form>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+        </view>
+    </view>
+</view>

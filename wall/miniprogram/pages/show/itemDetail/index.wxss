@@ -1,0 +1,36 @@
+/* pages/show/itemDetail/index.wxss */
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.detail-title {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: bolder
+}
+
+.detail-tab {
+  display: inline-block;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  padding: 0 5rpx;
+  line-height: 60rpx;
+  background-color: orange;
+  background-clip: border-box;
+  font-weight: lighter;
+}
+
+.detail-tab::after {
+  content: '';
+  position: absolute;
+  margin-left: 5rpx;
+  border: 30rpx solid transparent;
+  border-left-color: orange;
+}
+
+.detail-text {
+  margin-top: 1em;
+  text-indent: 2em;
+}

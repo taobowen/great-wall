@@ -1,0 +1,21 @@
+<!--pages/user/published/index.wxml-->
+<template name="msgItem">
+  <view class="msg-item" id="{{id}}" bindlongpress="handleItemPress" >
+    <h4 class="msg-item-title">{{theme}}</h4>
+    <p class="msg-item-text">{{briefIntroduction}}...</p>
+    <ul class="weui-media-box__info">
+      <li class="msg-item-meta">浏览量：{{clickTimes}}</li>
+      <li class="msg-item-meta">|</li>
+      <li class="msg-item-meta">{{releaseTime}}</li>
+      <li class="msg-item-meta">|</li>
+      <li class="msg-item-meta">{{type[categoryId]}}</li>
+      <li class="msg-item-edit" bindtap="handleItemEdit" data-index="{{index}}">编辑</li>
+    </ul>
+  </view>
+</template>
+<block wx:for="{{msgItem}}">
+  <template is="msgItem" data="{{...item,index}}"/>
+</block>
+<mp-dialog title="删除" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+  <view>你确定要删除这条消息吗？</view>
+</mp-dialog>

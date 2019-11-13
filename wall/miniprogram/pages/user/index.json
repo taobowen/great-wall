@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-cell": "../../common/miniprogram_dist/cell/cell",
+    "mp-cells": "../../common/miniprogram_dist/cells/cells"
+  }
+}

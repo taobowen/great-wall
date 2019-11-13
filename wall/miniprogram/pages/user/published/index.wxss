@@ -1,0 +1,46 @@
+/* pages/user/published/index.wxss */
+.msg-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.781);
+  padding: 1rem;
+}
+
+.msg-item:last-child {
+  border: none;
+}
+
+.msg-item-edit {
+  margin-left: 1rem;
+  color: orange;
+}
+
+.msg-item-title {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.4;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.msg-item-text {
+  margin-top: 1rem;
+  color: gray;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.msg-item-meta {
+  float: left;
+  padding-right: 1em;
+}

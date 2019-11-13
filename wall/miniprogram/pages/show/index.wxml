@@ -1,0 +1,46 @@
+<!--pages/show/index.wxml-->
+<template name="msgItem">
+  <view class="msg-item" bindtap="handleItemClick" id="{{id}}" data-index="{{index}}">
+    <h4 class="msg-item-title">{{theme}}</h4>
+    <p class="msg-item-text">{{briefIntroduction}}...</p>
+    <ul class="weui-media-box__info">
+      <li class="msg-item-meta">{{releaseTime}}</li>
+      <li class="msg-item-meta msg-item-divide">{{type[categoryId]}}</li>
+      <li class="msg-item-meta">浏览量：{{clickTimes}}</li>
+    </ul>
+  </view>
+</template>
+
+<!--轮播图-->
+<view class="page-section page-section-spacing swiper">
+  <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <view class="swiper-item">{{item}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<scroll-view scroll-x="true" enable-flex="true">
+  <view class="scroll-cates">
+    <view wx:for="{{cateItem}}" class="cate-item" bindtap="handleClickCate">
+      <span id="{{index}}" class="{{cateIndex === index ? 'choose-item' : ''}}">{{item}}</span>
+    </view>
+  </view>
+</scroll-view>
+
+<swiper interval="2000" duration="500" current="{{cateIndex}}" bindchange="handleCateChange" style="height:100vh;">
+  <block wx:for="{{background}}">
+    <swiper-item style="height:100vh; overflow:auto;">
+      <recycle-view batch="{{batchSetRecycleData}}" id="recycleId">
+        <recycle-item wx:for="{{msgItem}}" wx:key="id">
+          <template is="msgItem" data="{{...item,type,index}}"/>
+        </recycle-item>
+      </recycle-view>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+

@@ -1,0 +1,6 @@
+<!--pages/user/index.wxml-->
+<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+<mp-cells ext-class="my-cells" title="个人中心">
+    <mp-cell value="我的发布" footer=">" bindtap="handlePublished"></mp-cell>
+    <mp-cell value="消息中心" footer=">" bindtap="handleMsg"></mp-cell>
+</mp-cells>
