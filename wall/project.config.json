@@ -5,8 +5,8 @@
 	},
 	"miniprogramRoot": "miniprogram/",
 	"compileType": "miniprogram",
-	"libVersion": "2.8.2",
-	"projectname": "miniprogram-2",
+	"libVersion": "2.10.2",
+	"projectname": "wall",
 	"scripts": {
 		"beforeCompile": "npm run tsc",
 		"beforePreview": "npm run tsc",

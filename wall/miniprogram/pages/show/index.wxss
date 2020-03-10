@@ -47,6 +47,17 @@
 .scroll-cates {
   display: flex;
   flex-flow: row nowrap;
+  transform: all 0.5s;
+}
+
+.scroll-cates-fix {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  transform: all 0.5s;
 }
 
 .cate-item {
@@ -57,4 +68,10 @@
 
 .choose-item {
   font-weight: bolder;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }

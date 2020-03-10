@@ -1,7 +1,8 @@
 "use strict";
 App({
     globalData: {
-      selectedIndex: 0
+      selectedIndex: 0,
+      token: ''
     },
     onLaunch: function () {
         var _this = this;
@@ -10,7 +11,8 @@ App({
         wx.setStorageSync('logs', logs);
         wx.login({
             success: function (res) {
-                console.log(res.code);
+              console.log(res.code);
+              wx.setStorageSync('code', res.code);
             },
         });
         wx.getSetting({

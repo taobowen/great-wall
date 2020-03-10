@@ -5,15 +5,21 @@ Component({
     selectedColor: "#3cc51f",
     list: [{
       "pagePath": "../../pages/show/index",
-      "text": "墙"
+      "text": "墙",
+      "selectedIconPath": "../common/image/ikun.jpg",
+      "iconPath": "../common/image/ikun.jpg"
     },
     {
       "pagePath": "../../pages/publish/index",
-      "text": "发布"
+      "text": "发布",
+      "selectedIconPath": "../common/image/ikun.jpg",
+      "iconPath": "../common/image/ikun.jpg"
     },
     {
       "pagePath": "../../pages/user/index",
-      "text": "我"
+      "text": "我",
+      "selectedIconPath": "../common/image/ikun.jpg",
+      "iconPath": "../common/image/ikun.jpg"
     }]
   },
   attached() {
