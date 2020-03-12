@@ -17,8 +17,25 @@ Page({
     // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
     eventChannel.on('acceptDataFromOpenerPage', function (data) {
       console.log(data);
-      _this.setData({
-        data
+      let {pageNum, id} = data;
+      wx.request({
+        url: `https://oyoungy.cn:8443/wall/posting/pageNumListFloorsByPostingId?postingId=${id}&pageNum=${pageNum}&pageSize=10`,
+        method: 'GET',
+        header: { 'Authorization': "Bearer " + wx.getStorageSync('token') },
+        success(res) {
+          if (res.data.code === 200) {
+            // 获取下一页的数据
+            let {data} = res.data;
+            _this.setData({
+              data
+            })
+          } else {
+            _this.setData({
+              // msgItem: []
+            });
+            console.log('请求失败！' + res.errMsg);
+          }
+        }
       })
     })
   },

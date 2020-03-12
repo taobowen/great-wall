@@ -2,6 +2,6 @@
 <div class="detail-content">
   <h1 class="detail-title">{{data.theme}}</h1>
   <div><span class="detail-tab">{{type[data.categoryId]}}</span></div>
-  <p class="detail-text">{{data.briefIntroduction}}</p>
+  <p class="detail-text">{{data.detailedIntroduction}}</p>
 </div>
 

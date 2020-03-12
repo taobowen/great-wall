@@ -125,16 +125,12 @@ Page({
  */
 
   handleItemClick: function(e) {
-    const {msgItem} = this.data;
+    const {pageNum} = this.data;
+    console.log(e);
     const {index} = e.currentTarget.dataset;
     const postMessage = {
       id: e.target.id,
-      theme: msgItem[index].theme,
-      briefIntroduction: msgItem[index].briefIntroduction,
-      categoryId: msgItem[index].categoryId,
-      clickTimes: msgItem[index].clickTimes,
-      posterId: msgItem[index].posterId,
-      releaseTime: msgItem[index].releaseTime
+      pageNum: pageNum
     }
     wx.navigateTo({
       url: './itemDetail/index',
