@@ -1,4 +1,4 @@
-# Great Wall
+# Universal Wall
 Universal Wall Mini Program
 
 ## Introduction
